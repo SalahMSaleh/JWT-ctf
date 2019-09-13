@@ -58,6 +58,12 @@ if __name__ == '__main__':
         parser.print_help()
         print("\n[-] Please specify a secret or key file.")
         exit()
+    else:
+        if not args.algo:
+            parser.print_help()
+            print("\n[-] Please specify an algorithem.")
+            exit()
+   
     if args.secret and args.key_file:
         parser.print_help()
         print("\n[-] Please specify a secret or key file not both!.")
